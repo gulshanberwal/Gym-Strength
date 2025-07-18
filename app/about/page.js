@@ -11,7 +11,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-300">
             At <span className="text-red-500 font-semibold">StrengthBlast</span>, we dont just build bodies — we build discipline,
             strength, and community. Our mission is to provide a hardcore, no-nonsense fitness environment
-            for anyone serious about reaching their potential. Whether you're a beginner or a seasoned
+            for anyone serious about reaching their potential. Whether you&apos;re a beginner or a seasoned
             lifter, this is your home — a place where iron meets intent.
           </p>
         </div>
