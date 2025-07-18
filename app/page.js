@@ -1,8 +1,8 @@
 'use client';
-
 import { motion, useInView } from 'framer-motion';
 import React, { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // ✅ Import Next Image
 import Timings from '@/components/Timings';
 import Testimonials from '@/components/Testimonials';
 import Gallery from '@/components/Gallery';
@@ -16,10 +16,13 @@ export default function Home() {
     <div>
       {/* Background Section */}
       <div className="w-screen h-screen relative">
-        <img
-          className="h-screen w-screen object-cover"
-          src="https://img.freepik.com/premium-photo/black-white-gym-equipment-with-copy-space_269655-74774.jpg"
+        {/* ✅ Use Next.js Image with fill */}
+        <Image
+          src="/background.avif"
           alt="gym background"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-[#090909ad] bg-opacity-50"></div>
       </div>
@@ -40,12 +43,12 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-300 text-base md:text-lg">
-              Gym training is a structured and disciplined approach to physical exercise that focuses on strength, endurance and overall fitness improvement.
+              Gym training is a structured and disciplined approach to physical exercise that focuses on strength&apos; endurance and overall fitness improvement.
             </p>
 
             <Link href="/pricing">
               <button className="border-2 border-red-600 text-red-600 px-6 py-2 font-semibold uppercase hover:bg-red-600 hover:text-white transition">
-                LET'S JOIN NOW
+                LET&apos;S JOIN NOW
               </button>
             </Link>
 
@@ -66,6 +69,7 @@ export default function Home() {
           </div>
         </motion.section>
       </div>
+
       <Timings />
       <Testimonials />
       <Gallery />
