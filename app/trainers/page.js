@@ -1,6 +1,6 @@
 // app/trainers/page.tsx
 import Footer from '@/components/Footer';
-
+import Image from 'next/image';
 export default function TrainersPage() {
     const trainers = [
         {
@@ -40,16 +40,25 @@ export default function TrainersPage() {
                             key={index}
                             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-600 transition duration-300"
                         >
-                            <img
-                                src={trainer.image}
-                                alt={trainer.name}
-                                className="w-full h-72 object-cover object-center"
-                            />
+                            <div className="relative w-full h-72">
+                                <Image
+                                    src={trainer.image}
+                                    alt={trainer.name}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    className="object-cover object-center"
+                                />
+                            </div>
+
                             <div className="p-6 space-y-3">
                                 <h2 className="text-2xl font-bold text-red-500">{trainer.name}</h2>
                                 <p className="text-gray-300 text-sm">{trainer.bio}</p>
+
                                 <div>
-                                    <h3 className="text-sm text-gray-400 font-semibold">Specialties:</h3>
+                                    <h3 className="text-sm text-gray-400 font-semibold">
+                                        Specialties:
+                                    </h3>
+
                                     <ul className="list-disc list-inside text-gray-200 text-sm">
                                         {trainer.specialties.map((spec, i) => (
                                             <li key={i}>{spec}</li>

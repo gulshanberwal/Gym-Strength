@@ -18,10 +18,13 @@ export default function Home() {
       <div className="w-screen h-screen relative">
         {/* ✅ Use Next.js Image with fill */}
         <Image
-          src="/background.avif"
+          src="/gym-background.jpg"
           alt="gym background"
           fill
           className="object-cover"
+          placeholder='blur'
+          blurDataURL='/gym-background-comprassed.jpg'
+          sizes='100vw'
           priority
         />
         <div className="absolute inset-0 bg-[#090909ad] bg-opacity-50"></div>

@@ -1,13 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const galleryImages = [
   // from image_query results
   '/gallery/gallery1.jpg',
   '/gallery/gallery2.jpg',
   '/gallery/gallery3.jpeg'
-  
+
 ];
 
 export default function Gallery() {
@@ -37,11 +38,15 @@ export default function Gallery() {
               viewport={{ once: true }}
               className="overflow-hidden rounded-xl border-2 border-red-600 shadow-lg hover:shadow-red-600 transition"
             >
-              <img
-                src={src}
-                alt={`Gym photo ${index + 1}`}
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-              />
+              <div className="relative w-full h-64">
+                <Image
+                  src={src}
+                  alt={`Gym photo ${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
