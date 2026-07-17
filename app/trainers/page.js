@@ -7,7 +7,6 @@ import Loader from '@/components/Loader';
 export default function TrainersPage() {
 
     const [loading, setLoading] = useState(true)
-    const [loadedImages, setLoadedImages] = useState(0)
 
     const trainers = [
         {
@@ -36,17 +35,6 @@ export default function TrainersPage() {
         },
     ];
 
-    const handleImageLoad = () => {
-        setLoadedImages((prev) => {
-            const newCount = prev + 1;
-
-            if (newCount === 4) {
-                setLoading(false);
-            }
-
-            return newCount;
-        });
-    };
 
     return (
         <>
@@ -68,8 +56,7 @@ export default function TrainersPage() {
                                         fill
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                         className="object-cover object-center"
-                                        onLoad={handleImageLoad}
-                                        onError={handleImageLoad}
+                                        onLoad={()=> setLoading(false)}
                                     />
                                 </div>
 
