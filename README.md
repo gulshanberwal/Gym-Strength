@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏋️‍♂️ Gym-Strength
 
-## Getting Started
+Gym-Strength is a fully responsive, pixel-perfect modern frontend landing web application designed to showcase high-fidelity user interface design and clean component-driven architecture for a fitness center. 
 
-First, run the development server:
+This project was built entirely as a showcase of modern frontend development skills, styling workflows, and clean code optimization.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- **Component-Driven Architecture**: Clean, reusable layouts using Next.js and standard JavaScript.
+- **Dynamic Structural Pages**: Fully designed sub-pages including **About**, **Services**, **Trainers**, **Pricing**, and **Contact**.
+- **Immersive Visuals**: High-fidelity media sections featuring an interactive **Gallery**, **Testimonials** carousel layer, and structured **Gym Timings**.
+- **Optimized UI/UX**: Includes pre-built **Loader** animations and layout smooth-scroll behaviors.
+- **Responsive Layout Engine**: Built utilizing custom CSS modules and layouts optimized cleanly for Mobile, Tablet, and Desktop viewing viewports.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js (App Router layout engine)
+- **Styling**: Vanilla Global CSS configuration with Tailwind CSS
+- **Icons & Graphics**: Optimized SVG layout assets
+- **Code Standards**: Configured using modern ESLint configs (`eslint.config.mjs`)
+
+---
+
+## 📂 Project Directory Structure
+
+```text
+Gym-Strength-main/
+├── app/                  # Next.js App Router Core Routing Core Pages
+│   ├── about/            # Studio context and details overview
+│   ├── contact/          # Dynamic contact details forms layout
+│   ├── pricing/          # Tiered membership price listing cards
+│   ├── services/         # Grid framework detailing fitness programs
+│   ├── trainers/         # Professional athletic staff portfolios 
+│   ├── globals.css       # Core layout variable overrides
+│   └── page.js           # Production master landing view container
+├── components/           # Reusable View Modules & Custom Elements
+│   ├── Navbar.js         # Unified fluid site directory tracking 
+│   ├── Gallery.js        # High-performance static responsive image array
+│   ├── Testimonials.js   # Customer success critique view blocks
+│   └── Timings.js        # Organized scheduling timeline layouts
+└── public/               # Compressed structural system image assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Getting Started Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Follow these brief steps to bring up a local production tracking build of this portfolio.
 
-## Learn More
+### 1. Prerequisites
+Ensure you have the following engine installed on your environment:
+- **Node.js** (v18.x or higher recommended)
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Installation
+Clone the repository path and run a standard install block:
+```bash
+git clone https://github.com
+cd Gym-Strength
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Execution
+Launch the Next.js optimization engine locally:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) inside your web browser to check the interface.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To generate a completely minified frontend build map for static portfolio deployment:
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Project Scope & License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repository is built explicitly for code quality review and frontend development portfolio tracking. All rights reserved by the original author.
